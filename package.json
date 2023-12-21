@@ -1,4 +1,5 @@
 {
+  "name": "@vdesign/vdesign",
   "private": true,
   "scripts": {
     "build": "turbo run build",
