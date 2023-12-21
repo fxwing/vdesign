@@ -1,10 +1,9 @@
-# Turborepo Design System Starter
+# vdesign React UI libiary
 
 This guide explains how to use a React design system starter powered by:
 
 - 🏎 [Turborepo](https://turbo.build/repo) — High-performance build system for Monorepos
 - 🚀 [React](https://reactjs.org/) — JavaScript library for user interfaces
-- 🛠 [Tsup](https://github.com/egoist/tsup) — TypeScript bundler powered by esbuild
 - 📖 [Storybook](https://storybook.js.org/) — UI component environment powered by Vite
 
 As well as a few others tools preconfigured:
@@ -20,7 +19,7 @@ As well as a few others tools preconfigured:
 Run the following command:
 
 ```sh
-npx create-turbo@latest -e design-system
+pnpm install  vdesign
 ```
 
 ### Useful Commands
@@ -57,17 +56,12 @@ To make the core library code work across all browsers, we need to compile the r
 
 Running `pnpm build` from the root of the Turborepo will run the `build` command defined in each package's `package.json` file. Turborepo runs each `build` in parallel and caches & hashes the output to speed up future builds.
 
-For `acme-core`, the `build` command is the following:
 
-```bash
-tsup src/index.tsx --format esm,cjs --dts --external react
-```
 
-`tsup` compiles `src/index.tsx`, which exports all of the components in the design system, into both ES Modules and CommonJS formats as well as their TypeScript types. The `package.json` for `acme-core` then instructs the consumer to select the correct format:
 
-```json:acme-core/package.json
+```json:@vdesign/ui/package.json
 {
-  "name": "@vdesign/core",
+  "name": "@vdesign/vdesign",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -76,10 +70,10 @@ tsup src/index.tsx --format esm,cjs --dts --external react
 }
 ```
 
-Run `pnpm build` to confirm compilation is working correctly. You should see a folder `acme-core/dist` which contains the compiled output.
+Run `pnpm build` to confirm compilation is working correctly. You should see a folder `@vdesign/ui/dist` which contains the compiled output.
 
 ```bash
-acme-core
+@vdesign/ui
 └── dist
     ├── index.d.ts  <-- Types
     ├── index.js    <-- CommonJS version
@@ -88,9 +82,9 @@ acme-core
 
 ## Components
 
-Each file inside of `acme-core/src` is a component inside our design system. For example:
+Each file inside of `@vdesign/ui/src` is a component inside our design system. For example:
 
-```tsx:acme-core/src/Button.tsx
+```tsx:@vdesign/ui/src/components/Button.tsx
 import * as React from 'react';
 
 export interface ButtonProps {
@@ -106,7 +100,7 @@ Button.displayName = 'Button';
 
 When adding a new file, ensure the component is also exported from the entry `index.tsx` file:
 
-```tsx:acme-core/src/index.tsx
+```tsx:@vdesign/ui/src/index.tsx
 import * as React from "react";
 export { Button, type ButtonProps } from "./Button";
 // Add new component exports here
