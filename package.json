@@ -1,6 +1,6 @@
 {
   "name": "@vdesign/vdesign",
-  "private": true,
+  "private": false,
   "scripts": {
     "modify": "node ./scripts/modify.js",
     "build": "cross-env COMMAND=build npm run modify &&turbo run build",
