@@ -2,6 +2,7 @@ import { exec } from 'node:child_process';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
+// import typescript from 'rollup-plugin-typescript2';
 import terser from '@rollup/plugin-terser';
 import copy from 'rollup-plugin-copy';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
