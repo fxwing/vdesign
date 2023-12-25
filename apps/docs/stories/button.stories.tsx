@@ -1,46 +1,53 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@vdesign/ui";
+import {
+  Button as ButtonComponent,
+  colorsList,
+  sizeList,
+  variantsList,
+} from "@vdesign/ui";
+import { EnhancedView } from "../componetns/View";
 
-const meta: Meta<typeof Button> = {
-  component: Button,
+const meta: Meta<typeof ButtonComponent> = {
+  title: "Components/Button",
+  component: ButtonComponent,
   argTypes: {
-    type: {
-      control: { type: "radio" },
-      options: ["button", "submit", "reset"],
+    ref: {
+      control: { type: "string" },
+    },
+    size: {
+      control: { type: "select" },
+      options: sizeList,
+    },
+    style: {
+      control: { type: "object" },
+      name: "style",
+    },
+    disabled: {
+      control: { type: "boolean" },
+      type: { name: "boolean", required: false },
+    },
+    className: {
+      control: { type: "text" },
+    },
+    variant: {
+      control: { type: "select" },
+      options: variantsList,
+    },
+    color: {
+      control: { type: "select" },
+      options: colorsList,
     },
   },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof ButtonComponent>;
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
-export const Primary: Story = {
-  render: (props) => (
-    <Button
-      {...props}
-      onClick={(): void => {
-        // eslint-disable-next-line no-alert -- alert for demo
-        alert("Hello from Turborepo!");
-      }}
-    >
-      Hello
-    </Button>
+export const Button: Story = {
+  render: (args) => (
+    <EnhancedView>
+      <ButtonComponent {...args}>Button</ButtonComponent>
+    </EnhancedView>
   ),
-  name: "Button",
-  args: {
-    children: "Hello",
-    type: "button",
-    style: {
-      color: "blue",
-      border: "1px solid gray",
-      padding: 10,
-      borderRadius: 10,
-    },
-  },
 };

@@ -5,7 +5,7 @@
   "scripts": {
     "modify": "node ./scripts/modify.js",
     "build": "cross-env COMMAND=build npm run modify &&turbo run build",
-    "dev": "cross-env COMMAND=dev npm run modify && turbo run dev",
+    "dev": "cross-env COMMAND=dev npm run modify && turbo run dev ",
     "lint": "turbo run lint",
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
