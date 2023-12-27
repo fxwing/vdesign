@@ -6,7 +6,7 @@ import React, {
   type RefObject,
 } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
-// import { Ripple } from "@actify/Ripple";
+import { Ripple } from "../Ripple";
 // import { Elevation } from "@actify/Elevation";
 
 const variants = tv({
@@ -110,7 +110,7 @@ const Button = forwardRef(
       children,
       className,
       size,
-      // ripple = true,
+      ripple = true,
       color = "primary",
       variant = "filled",
     } = props;
@@ -132,8 +132,8 @@ const Button = forwardRef(
           }}
         >
           {children}
-          {/* {ripple ? <Ripple /> : null}
-          {variant === "elevated" && <Elevation level={3} />} */}
+          {ripple ? <Ripple /> : null}
+          {/* {variant === "elevated" && <Elevation level={3} />} */}
         </a>
       );
     }
@@ -155,8 +155,8 @@ const Button = forwardRef(
         }}
       >
         {children}
-        {/* {ripple ? <Ripple /> : null}
-        {variant === "elevated" && <Elevation level={3} />} */}
+        {ripple ? <Ripple /> : null}
+        {/* {variant === "elevated" && <Elevation level={3} />} */}
       </button>
     );
   }
