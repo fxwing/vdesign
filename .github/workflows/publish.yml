@@ -1,30 +1,39 @@
-name: Public Npm
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+
+name: Node.js Package
 
 on:
-  push:
-    branches: [main]
+  release:
+    types: [created]
 
 jobs:
-  publish:
+  publish-npm:
     runs-on: ubuntu-latest
-
-    name: "publish pnpm"
-
-    environment: npm
-
     steps:
-      - uses: actions/checkout@main
+      - name: Checkout Repo
+        uses: actions/checkout@v3
 
-      - name: Install and Build
-        run: |
-          npm install
-          npm run build # 这是我的项目的打包命令，你也可以改成你的
+      - name: Install pnpm Manager
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
 
-      - name: "Publish to the npm registry"
+      - name: Setup Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Build Package
+        run: pnpm -F ui build
+
+      - name: Publish Package
         run: |
+          cd packages/ui
           npm publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
-        with:
-          default_branch: "main"
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
