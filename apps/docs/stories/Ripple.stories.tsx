@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Ripple as RippleComponent } from "@vdesign/ui";
+import { Ripple as RippleComponent } from "vdesign";
 
 const meta: Meta<typeof RippleComponent> = {
   title: "Components/Ripple",

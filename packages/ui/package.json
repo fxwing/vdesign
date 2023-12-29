@@ -1,6 +1,6 @@
 {
-  "name": "@vdesign/ui",
-  "version": "0.0.0",
+  "name": "vdesign",
+  "version": "0.0.1",
   "main": "./src/index.ts",
   "module": "",
   "types": "",
@@ -39,6 +39,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fxwing/vdesign.git",
+    "directory": "packages/ui"
   },
   "dependencies": {
     "tailwind-variants": "^0.1.19",

@@ -6,7 +6,7 @@ export default withMaterialColors(
     darkMode: "class",
     content: [
       "./stories/*.{js,ts,jsx,tsx,mdx}",
-      "./node_modules/@vdesign/ui/src/**/*.{js,ts,jsx,tsx,mdx}",
+      "./node_modules/vdesign/src/**/*.{js,ts,jsx,tsx,mdx}",
       "./componetns/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {

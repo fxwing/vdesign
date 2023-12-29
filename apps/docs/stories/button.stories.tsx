@@ -5,7 +5,7 @@ import {
   colorsList,
   sizeList,
   variantsList,
-} from "@vdesign/ui";
+} from "vdesign";
 import { EnhancedView } from "../componetns/View";
 
 const meta: Meta<typeof ButtonComponent> = {

@@ -59,7 +59,7 @@ Running `pnpm build` from the root of the Turborepo will run the `build` command
 
 
 
-```json:@vdesign/ui/package.json
+```json:vdesign/package.json
 {
   "name": "@vdesign/vdesign",
   "version": "0.0.0",
@@ -70,10 +70,10 @@ Running `pnpm build` from the root of the Turborepo will run the `build` command
 }
 ```
 
-Run `pnpm build` to confirm compilation is working correctly. You should see a folder `@vdesign/ui/dist` which contains the compiled output.
+Run `pnpm build` to confirm compilation is working correctly. You should see a folder `vdesign/dist` which contains the compiled output.
 
 ```bash
-@vdesign/ui
+vdesign
 └── dist
     ├── index.d.ts  <-- Types
     ├── index.js    <-- CommonJS version
@@ -82,9 +82,9 @@ Run `pnpm build` to confirm compilation is working correctly. You should see a f
 
 ## Components
 
-Each file inside of `@vdesign/ui/src` is a component inside our design system. For example:
+Each file inside of `vdesign/src` is a component inside our design system. For example:
 
-```tsx:@vdesign/ui/src/components/Button.tsx
+```tsx:vdesign/src/components/Button.tsx
 import * as React from 'react';
 
 export interface ButtonProps {
@@ -100,7 +100,7 @@ Button.displayName = 'Button';
 
 When adding a new file, ensure the component is also exported from the entry `index.tsx` file:
 
-```tsx:@vdesign/ui/src/index.tsx
+```tsx:vdesign/src/index.tsx
 import * as React from "react";
 export { Button, type ButtonProps } from "./Button";
 // Add new component exports here
