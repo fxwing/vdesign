@@ -28,7 +28,7 @@ jobs:
         run: pnpm install
 
       - name: Build Package
-        run: pnpm -F ui build
+        run: pnpm -F ui run  build
 
       - name: Publish Package
         run: |
