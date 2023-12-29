@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 import { Ripple } from "../Ripple";
-// import { Elevation } from "@actify/Elevation";
+import { Elevation } from "../Elevation";
 
 const variants = tv({
   base: "relative inline-flex gap-2 items-center justify-center select-none h-10 text-sm px-6 rounded-full transition-all duration-300 ease-in-out",
@@ -133,7 +133,7 @@ const Button = forwardRef(
         >
           {children}
           {ripple ? <Ripple /> : null}
-          {/* {variant === "elevated" && <Elevation level={3} />} */}
+          {variant === "elevated" && <Elevation className="" level={2} />}
         </a>
       );
     }
@@ -156,7 +156,7 @@ const Button = forwardRef(
       >
         {children}
         {ripple ? <Ripple /> : null}
-        {/* {variant === "elevated" && <Elevation level={3} />} */}
+        {variant === "elevated" && <Elevation level={3} />}
       </button>
     );
   }
