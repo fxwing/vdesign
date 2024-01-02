@@ -1,6 +1,6 @@
 {
-  "name": "vdesign",
-  "version": "0.0.1",
+  "name": "fxwing",
+  "version": "0.0.2",
   "main": "./src/index.ts",
   "module": "",
   "types": "",
@@ -23,8 +23,8 @@
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.38",
     "@types/react-dom": "^18.2.17",
-    "@vdesign/eslint-config": "workspace:*",
-    "@vdesign/typescript-config": "workspace:*",
+    "@fxwing/eslint-config": "workspace:*",
+    "@fxwing/typescript-config": "workspace:*",
     "eslint": "^8.54.0",
     "react": "^18.2.0",
     "rollup": "^4.9.1",
@@ -42,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:fxwing/vdesign.git",
+    "url": "git@github.com:fxwing/fxwing.git",
     "directory": "packages/ui"
   },
   "dependencies": {

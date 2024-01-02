@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Badges as BadgesComponents, badgesColor } from "vdesign";
+import { Badges as BadgesComponents, badgesColor } from "fxwing";
 
 const meta: Meta<typeof BadgesComponents> = {
   title: "Components/Badges",

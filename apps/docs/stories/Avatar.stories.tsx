@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Avatar as AvatarComponents, AvatarVariants } from "vdesign";
+import { Avatar as AvatarComponents, AvatarVariants } from "fxwing";
 
 const meta: Meta<typeof AvatarComponents> = {
   title: "Components/Avatar",

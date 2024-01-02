@@ -29,6 +29,6 @@ const Divider: React.FC<DividerProps> = (props) => {
   return <div {...rest} className={variants({ className })} style={styles} />;
 };
 
-Divider.displayName = "vdesign.Divider";
+Divider.displayName = "fxwing.Divider";
 
 export default Divider;

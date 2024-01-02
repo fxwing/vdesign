@@ -18,6 +18,6 @@ const Ripple: FC<RippleProps> = (props: RippleProps) => {
     </span>
   );
 };
-Ripple.displayName = "vdesign.Ripple";
+Ripple.displayName = "fxwing.Ripple";
 
 export default Ripple;

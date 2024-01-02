@@ -22,7 +22,7 @@ importers:
 
   apps/docs:
     dependencies:
-      "vdesign":
+      "fxwing":
         specifier: workspace:*
         version: link:../../packages/ui
       tailwind-variants:
@@ -59,10 +59,10 @@ importers:
       "@types/react-dom":
         specifier: ^18.2.17
         version: registry.npmmirror.com/@types/react-dom@18.2.17
-      "@vdesign/eslint-config":
+      "@fxwing/eslint-config":
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      "@vdesign/typescript-config":
+      "@fxwing/typescript-config":
         specifier: workspace:*
         version: link:../../packages/typescript-config
       "@vitejs/plugin-react":
@@ -149,10 +149,10 @@ importers:
       "@types/react-dom":
         specifier: ^18.2.17
         version: 18.2.17
-      "@vdesign/eslint-config":
+      "@fxwing/eslint-config":
         specifier: workspace:*
         version: link:../eslint-config
-      "@vdesign/typescript-config":
+      "@fxwing/typescript-config":
         specifier: workspace:*
         version: link:../typescript-config
       eslint:

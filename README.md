@@ -1,4 +1,4 @@
-# vdesign React UI libiary
+# fxwing React UI libiary
 
 This guide explains how to use a React design system starter powered by:
 
@@ -19,7 +19,7 @@ As well as a few others tools preconfigured:
 Run the following command:
 
 ```sh
-pnpm install  vdesign
+pnpm install  fxwing
 ```
 
 ### Useful Commands
@@ -59,9 +59,9 @@ Running `pnpm build` from the root of the Turborepo will run the `build` command
 
 
 
-```json:vdesign/package.json
+```json:fxwing/package.json
 {
-  "name": "@vdesign/vdesign",
+  "name": "@fxwing/fxwing",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -70,10 +70,10 @@ Running `pnpm build` from the root of the Turborepo will run the `build` command
 }
 ```
 
-Run `pnpm build` to confirm compilation is working correctly. You should see a folder `vdesign/dist` which contains the compiled output.
+Run `pnpm build` to confirm compilation is working correctly. You should see a folder `fxwing/dist` which contains the compiled output.
 
 ```bash
-vdesign
+fxwing
 └── dist
     ├── index.d.ts  <-- Types
     ├── index.js    <-- CommonJS version
@@ -82,9 +82,9 @@ vdesign
 
 ## Components
 
-Each file inside of `vdesign/src` is a component inside our design system. For example:
+Each file inside of `fxwing/src` is a component inside our design system. For example:
 
-```tsx:vdesign/src/components/Button.tsx
+```tsx:fxwing/src/components/Button.tsx
 import * as React from 'react';
 
 export interface ButtonProps {
@@ -100,7 +100,7 @@ Button.displayName = 'Button';
 
 When adding a new file, ensure the component is also exported from the entry `index.tsx` file:
 
-```tsx:vdesign/src/index.tsx
+```tsx:fxwing/src/index.tsx
 import * as React from "react";
 export { Button, type ButtonProps } from "./Button";
 // Add new component exports here
@@ -112,13 +112,13 @@ Storybook provides us with an interactive UI playground for our components. This
 
 - Use Vite to bundle stories instantly (in milliseconds)
 - Automatically find any stories inside the `stories/` folder
-- Support using module path aliases like `@vdesign-core` for imports
+- Support using module path aliases like `@fxwing-core` for imports
 - Write MDX for component documentation pages
 
 For example, here's the included Story for our `Button` component:
 
 ```js:apps/docs/stories/button.stories.mdx
-import { Button } from '@vdesign-core/src';
+import { Button } from '@fxwing-core/src';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 
 <Meta title="Components/Button" component={Button} />

@@ -26,7 +26,7 @@ const config = {
       resolve: {
         alias: [
           {
-            find: "vdesign",
+            find: "fxwing",
             replacement: resolve(__dirname, "../../../packages/ui/"),
           },
         ],

@@ -162,6 +162,6 @@ const Button = forwardRef(
   }
 );
 
-Button.displayName = "vdesign.Button";
+Button.displayName = "fxwing.Button";
 
 export default Button;

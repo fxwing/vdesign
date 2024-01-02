@@ -56,6 +56,6 @@ const Avatar: React.FC<AvatarProps> = forwardRef(
   }
 );
 
-Avatar.displayName = "vdesign.Avatar";
+Avatar.displayName = "fxwing.Avatar";
 
 export default Avatar;

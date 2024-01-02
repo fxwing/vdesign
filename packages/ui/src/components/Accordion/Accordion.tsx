@@ -50,6 +50,6 @@ const Accordion = Object.assign(AccordionRoot, {
   Content: AccordionContent,
 });
 
-Accordion.displayName = "vdesign.Accordion";
+Accordion.displayName = "fxwing.Accordion";
 
 export default Accordion;

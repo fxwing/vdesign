@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Accordion as AccordionComponent } from "vdesign";
+import { Accordion as AccordionComponent } from "fxwing";
 
 const meta: Meta<typeof AccordionComponent> = {
   title: "Components/Accordion",

@@ -1,5 +1,5 @@
 {
-  "extends": "@vdesign/typescript-config/react-app.json",
+  "extends": "@fxwing/typescript-config/react-app.json",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }

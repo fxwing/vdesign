@@ -5,7 +5,7 @@ import {
   colorsList,
   sizeList,
   variantsList,
-} from "vdesign";
+} from "fxwing";
 import { EnhancedView } from "../componetns/View";
 
 const meta: Meta<typeof ButtonComponent> = {

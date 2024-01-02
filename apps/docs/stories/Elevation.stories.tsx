@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Elevation as ElevationComponent } from "vdesign";
+import { Elevation as ElevationComponent } from "fxwing";
 
 const meta: Meta<typeof ElevationComponent> = {
   title: "Components/Elevation",
